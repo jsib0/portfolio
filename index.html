@@ -320,31 +320,7 @@
     <!-- BOOTSTRAP CORE JAVASCRIPT -->
     <script src="assets/js/jquery-1.11.1.min.js"></script>
         
-        <script>
-        
-      
-        
-        function sendmail(){
-            alert('testalert');
-             var contactemail  = $('#first_name').val();
-             var contactsubject  = $('#subject').val();
-              var contactmessage  = $('#message').val(); 
-            //update using the correct path
-            var url = 'php/contact.php';
-             $.post(url,{
-             email : contactemail,
-             subject : contactsubject,
-             message : contactmessage
-             }, function(data){
-                 alert('Email Sent Sucessfully');
-                 
-                  });
-        }
-        
-        
-        
-        
-        </script>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <script src="js/jquery-3.2.1.min.js"></script>

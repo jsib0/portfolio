@@ -10,11 +10,12 @@ $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
+$fname = $_POST['first_name'];
 
 $msg .='Email from '.$email.'
 Subject from '.$subject.'
     Email from '.$email.'';     
 
-mail("sibalajp@gmail.com",$subject,$msg,$headers);
+mail("sibalajp@gmail.com",$subject,$msg,$fname,$headers);
 
 ?>
