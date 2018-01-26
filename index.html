@@ -327,10 +327,10 @@
         function sendmail(){
             alert('testalert');
              var contactemail  = $('#first_name').val();
-        var contactsubject  = $('#subject').val();
-        var contactmessage  = $('#message').val(); 
+             var contactsubject  = $('#subject').val();
+              var contactmessage  = $('#message').val(); 
             //update using the correct path
-            var url = 'https://portfolioisthename.herokuapp.com/php/contact.php';
+            var url = 'php/contact.php';
              $.post(url,{
              email : contactemail,
              subject : contactsubject,
