@@ -15,6 +15,6 @@ $msg .='Email from '.$email.'
 Subject from '.$subject.'
     Email from '.$email.'';     
 
-mail("joeljfernandes@yahoo.com",$subject,$msg,$headers);
+mail("sibalajp@gmail.com",$subject,$msg,$headers);
 
 ?>
