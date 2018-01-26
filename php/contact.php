@@ -3,7 +3,7 @@
 
 
 $subject = 'Contact us';
-
+$to = 'sibalajp@gmail.com'
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 //below is what the customer types on the message
@@ -16,6 +16,6 @@ $msg .='Email from '.$email.'
 Subject from '.$subject.'
     Email from '.$email.'';     
 
-mail("sibalajp@gmail.com",$subject,$msg,$fname,$headers);
+mail($to,$subject,$msg,$fname,$headers);
 
 ?>
