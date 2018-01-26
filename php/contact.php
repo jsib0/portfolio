@@ -1,6 +1,6 @@
 
 <?php 
-console.log($_POST)
+
 
 $subject = 'Contact us';
 $to = 'sibalajp@gmail.com'
