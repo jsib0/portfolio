@@ -1,4 +1,9 @@
 <?php 
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+
+
 if(isset($_POST['submit'])){
     $to = "sibalajp@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
@@ -11,12 +16,12 @@ if(isset($_POST['submit'])){
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
-    if(  mail($to,$subject,$message,$headers)) {
+    if(  bool mail($to,$subject,$message,$headers)) {
     	 echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
     }
 
     else {
-    	echo "failed"
+    	echo "failed";
     }
    
     
