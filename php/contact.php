@@ -3,7 +3,7 @@
 
 
 $subject = 'Contact us';
-$to = 'sibalajp@gmail.com'
+$to = 'sibalajp@gmail.com';
 $header = "Hello";
 
 //below is what the customer types on the message

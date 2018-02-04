@@ -33,7 +33,25 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+    <?php 
+if(isset($_POST['submit'])){
+    $to = "sibalajp@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
 </head>
 <body>
    
@@ -290,18 +308,13 @@
                </div>
            </div>
             <div class="row">
-                <form action="php/contact.php" method="post" name="commentform">
-                    <div class="col-md-6">
-                       <input type="text" name="first_name" id="first_name" class="input-contact" placeholder="Name" required>
-                       <input type="email" name="email" class="input-contact" id="email" placeholder="E-mail" required> 
-                       <input type="text" name="subject" id="subject" class="input-contact" placeholder="Subject" required>
-                    </div>
-                    <div class="col-md-6">
-                      <textarea name="message" id="message" class="input-contact" placeholder="Message" cols="30" rows="7" required></textarea> 
-                      <button type="submit" value="Submit" onclick="sendmail()" name="submit" id="submit" class="btn submit-contact"><i class="fa fa-envelope-o"></i>SUBMIT</button> 
-                    </div>
-                </form>
-            </div>
+               <form action="" method="post">
+First Name: <input type="text" name="first_name"><br>
+Last Name: <input type="text" name="last_name"><br>
+Email: <input type="text" name="email"><br>
+Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+<input type="submit" name="submit" value="Submit">
+</form>            </div>
         </div>
     </section>
     
