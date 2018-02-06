@@ -10,7 +10,7 @@ const app = express();
 
 app.set('views', __dirname + "/views");
 app.set('view engine', 'ejs');
-app.use('/views', express.static(path.join(__dirname, 'views')))
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -20,7 +20,7 @@ app.use(express.static(__dirname + "/js"))
 
 
 app.get('/', (req, res) => {
-	res.sendFile(path.resolve(__dirname, 'index.html'))
+	res.render('index')
 })
 
 app.post('/send', (req,res) => {
@@ -66,7 +66,9 @@ transporter.sendMail(mailOptions, (error, info) => {
     console.log('Message sent: %s', info.messageId);  
     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-    res.sendFile(path.resolve(__dirname, 'index.html'))
+   
+
+    res.render('index', {msg: 'MAIL SENT'});
 });
 
 })
