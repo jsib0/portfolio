@@ -8,8 +8,9 @@ const fs = require('fs');
 
 const app = express();
 
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+app.set('views', __dirname + "/views");
+
+app.set('view engine', 'ejs');
 
 app.use('/views', express.static(path.join(__dirname, 'views')))
 
@@ -44,6 +45,9 @@ let transporter = nodemailer.createTransport({
     auth: {
         user: '6a167c56dc5c83f634bfcf7d22e548a1', 
         pass: '7dc249606bf889e1b5dd4877ad54bef3'  
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 
