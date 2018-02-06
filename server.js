@@ -15,8 +15,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + "/css"))
+app.use(express.static(__dirname + "/static"))
 app.use(express.static(__dirname + "/js"))
+
 
 
 app.get('/', (req, res) => {

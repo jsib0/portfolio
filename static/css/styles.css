@@ -209,6 +209,7 @@ header {
 
 .main-logo-text{
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .main-logo-text-secondary {
@@ -300,8 +301,8 @@ figure.effect-bubba {
     min-width: 320px;
     max-width: 480px;
     max-height: 360px;
-    width: 48%;
-    background: #000;
+    width: 50%;
+    background: #EFD7C1;
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -333,7 +334,7 @@ figure.effect-bubba {
     display: block;
     min-height: 100%;
     max-width: 100%;
-    opacity: 0.8;
+
     border: 4px solid #e74c3c;
 }
 
@@ -400,6 +401,7 @@ figure.effect-bubba figcaption::after {
 /*---------------*/
 /***** Zoe *****/
 /*---------------*/
+
 
 figure.effect-zoe figcaption {
 	top: auto;
