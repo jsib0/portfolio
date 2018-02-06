@@ -9,9 +9,7 @@ const fs = require('fs');
 const app = express();
 
 app.set('views', __dirname + "/views");
-
 app.set('view engine', 'ejs');
-
 app.use('/views', express.static(path.join(__dirname, 'views')))
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,7 +20,7 @@ app.use(express.static(__dirname + "/js"))
 
 
 app.get('/', (req, res) => {
-	res.render("index")
+	res.sendFile(path.resolve(__dirname, 'index.html'))
 })
 
 app.post('/send', (req,res) => {

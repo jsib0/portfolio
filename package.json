@@ -12,14 +12,17 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "nodemailer": "^4.4.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "sendgrid": "^5.2.3",
-    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
   "engines": {
     "node": "8.9.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
