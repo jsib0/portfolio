@@ -68,7 +68,7 @@ $(".box-container").click(function(){
     $(".bottom-right-corner").animate({borderRightWidth: "6px", borderBottomWidth: "6px", bottom: "0px"});
 });
 
-$('[data-toggle="tooltip"]').tooltip(); 
+// $('[data-toggle="tooltip"]').tooltip(); 
 
 //$('#svgfile').load('img/logo-moe.svg');
 //
