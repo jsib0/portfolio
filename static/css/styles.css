@@ -42,11 +42,11 @@ a{
     font-weight: bold;
 }
 
-button, input, .btn, a.btn {
+/*input, .btn, a.btn {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     color: #fff;
-}
+}*/
 
 footer {
     background: #000;
@@ -578,6 +578,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 
 #contact-me-section {
     margin-top: 30px;
+    padding-bottom: 100px;
 }
 
 #message {
@@ -600,7 +601,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 .submit-contact {
     margin-top: 20px;
     background: #fff;
-    color: #212121;
+    /*color: #212121;*/
     border: 1px solid #212121;
     font-size: 13px;
     font-family: 'Open sans',sans-serif;
