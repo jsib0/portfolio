@@ -373,7 +373,7 @@ figure.effect-bubba {
 }
 
 figure.effect-bubba figcaption::before {
-    border-top: 1px solid #fff;
+    /*border-top: 1px solid #fff;
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: rgb(255, 255, 255);
@@ -382,7 +382,7 @@ figure.effect-bubba figcaption::before {
     border-bottom-style: solid;
     border-bottom-color: rgb(255, 255, 255);
     -webkit-transform: scale(0,1);
-    transform: scale(0,1);
+    transform: scale(0,1);*/
 }
 
 figure.effect-bubba figcaption::after {
@@ -409,7 +409,7 @@ figure.effect-zoe figcaption {
 	padding: 1em;
 	height: 3.75em;
 	background: #e74c3c;
-	color: #3c4a50;
+	/*color: #3c4a50;*/
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,100%,0);
@@ -424,6 +424,10 @@ figure.effect-zoe p.icon-links a {
 	float: right;
 	color: #3c4a50;
 	font-size: 1.4em;
+
+}
+figcaption p {
+
 }
 
 figure.effect-zoe:hover p.icon-links a:hover,
@@ -480,6 +484,8 @@ figure.effect-zoe h2 {
 figure.effect-zoe:hover p {
     color: #000;
     font-weight: bold;
+    padding-left: 145px;
+    outline: 1px solid blue;
 }
 
 figure.effect-zoe:hover p.description {
