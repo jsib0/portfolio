@@ -484,8 +484,7 @@ figure.effect-zoe h2 {
 figure.effect-zoe:hover p {
     color: #000;
     font-weight: bold;
-    padding-left: 145px;
-    outline: 1px solid blue;
+    padding-left: 152px;
 }
 
 figure.effect-zoe:hover p.description {
