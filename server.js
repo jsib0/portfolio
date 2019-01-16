@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const nodemailer = require('nodemailer');
+const request = require('request');
 const path = require('path')
 const fs = require('fs');
 
@@ -22,6 +23,8 @@ app.get('/', (req, res) => {
 	res.render('index')
 })
 
+
+
 app.post('/send', (req,res) => {
 	const output = `
 	<p> Message From Portfolio </p>
@@ -34,6 +37,8 @@ app.post('/send', (req,res) => {
     	</ul>
 	<p>{req.body.message}</p>
 	`
+
+    console.log(req.body);
 
     let transporter = nodemailer.createTransport({
         host: 'in-v3.mailjet.com',
