@@ -26,19 +26,30 @@ app.get('/', (req, res) => {
 
 
 app.post('/send', (req,res) => {
-	const output = `
-	<p> Message From Portfolio </p>
-	   <h3> Contact Detail </h3>
-    	<ul>
-    		<li>First Name: ${req.body.first_name}</li>
-            <li>Email: ${req.body.email}</li>
-    		<li>Subject: ${req.body.subject}</li>
-    		<li>Message: ${req.body.message}</li>
-    	</ul>
-	<p>{req.body.message}</p>
-	`
+    
 
-    console.log(req.body);
+    const secretKey = "6LcBKYoUAAAAAKgEcJTMWVcUmx7TGhEHBGT-7x_w";
+
+    let verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+
+    request(verificationUrl,function(error,response,body) {
+    body = JSON.parse(body);
+
+    if(body.success !== undefined && !body.success) {
+      return res.json({"responseCode" : 1,"responseDesc" : "Failed captcha verification"});
+    }
+        
+    const output = `
+    <p> Message From Portfolio </p>
+       <h3> Contact Detail </h3>
+        <ul>
+            <li>First Name: ${req.body.first_name}</li>
+            <li>Email: ${req.body.email}</li>
+            <li>Subject: ${req.body.subject}</li>
+            <li>Message: ${req.body.message}</li>
+        </ul>
+    <p>{req.body.message}</p>
+    `
 
     let transporter = nodemailer.createTransport({
         host: 'in-v3.mailjet.com',
@@ -72,6 +83,15 @@ app.post('/send', (req,res) => {
 
         res.render('index', {msg: 'MAIL SENT'});
     });
+
+    
+    });
+
+
+
+	
+
+    
 
 });
 

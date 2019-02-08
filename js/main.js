@@ -1,3 +1,6 @@
+$(document).ready(function() {
+
+
 $(function(){
     // Cache the window object
     var $window = $(window);
@@ -18,11 +21,11 @@ $(function(){
 });
 
 $(document).scroll(function() {
-  var y = $(this).scrollTop();
+  var y = $(this).scrollTop()
     if (y > 250) {
-        $('header').fadeIn();
+        $('header').fadeIn()
     } else {
-        $('header').fadeOut();
+        $('header').fadeOut()
     }
 });
 
@@ -41,8 +44,16 @@ $(function () {
         } else { 
         $("#aboutme-section").show("slow");
       } 
-    });
-});
+    })
+})
+ 
+
+document.getElementById("submit").disabled = true;
+
+function enableBtn() {
+    document.getElementById("submit").disabled = false;
+}
+
 
 //  ==== MAIN LOGO ANIMATION ON CLICK ====
 $(".box-container").click(function(){
@@ -54,7 +65,38 @@ $(".box-container").click(function(){
     $(".bottom-left-corner").animate({borderLeftWidth: "6px", borderBottomWidth: "6px", bottom: "0px"});
     $(".bottom-right-corner").animate({borderRightWidth: "10px", borderBottomWidth: "10px", bottom: "60px"});
     $(".bottom-right-corner").animate({borderRightWidth: "6px", borderBottomWidth: "6px", bottom: "0px"});
-});
+})
+
+
+
+$('#message_form').submit(function() {
+
+    let recaptcha = $("#g-recaptcha-response").val();
+
+    if(recaptcha == undefined || recaptcha == null || recaptcha == ''){
+        event.preventDefault()
+        $("#myModal").modal('show')
+        return false
+    }
+
+    $(this).ajaxSubmit({
+          error: function(xhr) {
+            status('Error: ' + xhr.status)
+          },
+           success: function(response) {
+             console.log("Success")
+         }
+    });
+    return false
+
+})
+
+}) 
+
+
+
+
+
 
 // $('[data-toggle="tooltip"]').tooltip(); 
 //$('#svgfile').load('img/logo-moe.svg');

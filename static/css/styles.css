@@ -636,6 +636,13 @@ footer>.container>.row>.col-md-12>p{
     text-align: center
 }
 
+/* === MODAL === */
+
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+
 /* === MOBILE STYLING === */
 @media (max-width: 768px) { 
     .portfolio-row>h1,
