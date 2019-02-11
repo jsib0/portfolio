@@ -48,7 +48,7 @@ app.post('/send', (req,res) => {
             <li>Subject: ${req.body.subject}</li>
             <li>Message: ${req.body.message}</li>
         </ul>
-    <p>{req.body.message}</p>
+    <p></p>
     `
 
     let transporter = nodemailer.createTransport({
