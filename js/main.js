@@ -83,9 +83,10 @@ $('#message_form').submit(function() {
           error: function(xhr) {
             status('Error: ' + xhr.status)
           },
-           success: function(response) {
-            $(function() {
-              $( "#submit" ).click(function() {
+           success: function(response) {        
+              $(function() {
+                $("submit").removeClass("btn submit-contact")
+                $( "#submit" ).click(function() {
                 $( "#submit" ).addClass( "onclic", 250, validate);
               });
 
@@ -101,11 +102,6 @@ $('#message_form').submit(function() {
                   }, 1250 );
                 }
               });
-
-
-
-
-
 
          }
     });
