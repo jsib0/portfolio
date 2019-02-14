@@ -83,25 +83,26 @@ $('#message_form').submit(function() {
           error: function(xhr) {
             status('Error: ' + xhr.status)
           },
-           success: function(response) {        
-              $(function() {
-                $("submit").removeClass("btn submit-contact")
-                $( "#submit" ).click(function() {
-                $( "#submit" ).addClass( "onclic", 250, validate);
-              });
+           success: function(response) {   
+              console.log("success")     
+              // $(function() {
+              //   $("submit").removeClass("btn submit-contact")
+              //   $( "#submit" ).click(function() {
+              //   $( "#submit" ).addClass( "onclic", 250, validate);
+              // });
 
-              function validate() {
-                setTimeout(function() {
-                  $( "#submit" ).removeClass( "onclic" );
-                  $( "#submit" ).addClass( "validate", 450, callback );
-                }, 2250 );
-              }
-                function callback() {
-                  setTimeout(function() {
-                    $( "#submit" ).removeClass( "validate" );
-                  }, 1250 );
-                }
-              });
+              // function validate() {
+              //   setTimeout(function() {
+              //     $( "#submit" ).removeClass( "onclic" );
+              //     $( "#submit" ).addClass( "validate", 450, callback );
+              //   }, 2250 );
+              // }
+              //   function callback() {
+              //     setTimeout(function() {
+              //       $( "#submit" ).removeClass( "validate" );
+              //     }, 1250 );
+              //   }
+              // });
 
          }
     });
