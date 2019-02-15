@@ -87,29 +87,12 @@ $('#message_form').submit(function() {
           error: function(xhr) {
             status('Error: ' + xhr.status)
           },
-           success: function(response) {   
-              console.log("success")     
-              $(function() {
-                console.log("in function")
-                $( "#submit" ).removeClass("btn submit-contact");
-           
-                $( "#submit" ).addClass( "onclic submit-button");
+           success: function(response) {
+            alert("Message Sent!");
+            setTimeout(function() {
+              $(".link1").click()
+            }, 1000);
             
-                setTimeout(function() {
-                  $( "#submit" ).removeClass( "onclic submit-button" );
-                  console.log("remove onclic")
-                  $( "#submit" ).addClass( "validate");
-                }, 2250 );
-              
-             
-                  setTimeout(function() {
-                    $( "#submit" ).removeClass( "validate" );
-                      console.log("add class")
-                     $( "#submit" ).addClass("btn submit-contact");
-                  }, 2250 );
-                
-              });
-             console.log("done succes")
 
          }
     });
