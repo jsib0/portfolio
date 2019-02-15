@@ -99,14 +99,14 @@ $('#message_form').submit(function() {
                   $( "#submit" ).removeClass( "onclic" );
                   console.log("remove onclic")
                   $( "#submit" ).addClass( "validate");
-                }, 1000 );
+                }, 2250 );
               
              
                   setTimeout(function() {
                     $( "#submit" ).removeClass( "validate" );
                       console.log("add class")
                      $( "#submit" ).addClass("btn submit-contact");
-                  }, 1250 );
+                  }, 2250 );
                 
               });
              console.log("done succes")
