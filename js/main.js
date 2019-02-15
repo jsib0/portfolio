@@ -93,7 +93,6 @@ $('#message_form').submit(function() {
               $(".link1").click()
             }, 1000);
             
-
          }
     });
     return false
