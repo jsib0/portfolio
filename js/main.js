@@ -86,7 +86,7 @@ $('#message_form').submit(function() {
            success: function(response) {   
               console.log("success")     
               $(function() {
-                $("#submit").removeClass("btn submit-contact");
+                $( "#submit" ).removeClass("btn submit-contact");
                 $( "#submit" ).click(function() {
                 $( "#submit" ).addClass( "onclic", 250, validate);
               });
@@ -94,13 +94,15 @@ $('#message_form').submit(function() {
               function validate() {
                 setTimeout(function() {
                   $( "#submit" ).removeClass( "onclic" );
+                  console.log("remove onclic")
                   $( "#submit" ).addClass( "validate", 450, callback );
                 }, 2250 );
               }
                 function callback() {
                   setTimeout(function() {
                     $( "#submit" ).removeClass( "validate" );
-                     $("#submit").addClass("btn submit-contact");
+                      console.log("add class")
+                     $( "#submit" ).addClass("btn submit-contact");
                   }, 1250 );
                 }
               });
