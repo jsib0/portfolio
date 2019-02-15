@@ -92,16 +92,14 @@ $('#message_form').submit(function() {
               $(function() {
                 console.log("in function")
                 $( "#submit" ).removeClass("btn submit-contact");
-                $( "#submit" ).click(function() {
+           
                 $( "#submit" ).addClass( "onclic");
-              });
-
-              
+            
                 setTimeout(function() {
                   $( "#submit" ).removeClass( "onclic" );
                   console.log("remove onclic")
                   $( "#submit" ).addClass( "validate");
-                }, 2250 );
+                }, 1000 );
               
              
                   setTimeout(function() {
