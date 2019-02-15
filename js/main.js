@@ -100,6 +100,7 @@ $('#message_form').submit(function() {
                 function callback() {
                   setTimeout(function() {
                     $( "#submit" ).removeClass( "validate" );
+                     $("#submit").addClass("btn submit-contact");
                   }, 1250 );
                 }
               });
