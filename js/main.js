@@ -37,11 +37,15 @@ $(function () {
       $("#portfolio-section, #aboutme-section, #contact-me-section").hide();        
       if ($(this).attr("class") == "link1")
       {
+        $(this).attr("href", "#");
         $("#portfolio-section").fadeIn("slow");
       } else if ($(this).attr("class") == "link3")
         {
+          $(this).attr("href", "#");
           $("#contact-me-section").show("slow");
         } else { 
+
+        $(".link2").attr("href", "#");
         $("#aboutme-section").show("slow");
       } 
     })
