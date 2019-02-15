@@ -90,25 +90,26 @@ $('#message_form').submit(function() {
            success: function(response) {   
               console.log("success")     
               $(function() {
+                console.log("in function")
                 $( "#submit" ).removeClass("btn submit-contact");
                 $( "#submit" ).click(function() {
-                $( "#submit" ).addClass( "onclic", 250, validate);
+                $( "#submit" ).addClass( "onclic");
               });
 
-              function validate() {
+              
                 setTimeout(function() {
                   $( "#submit" ).removeClass( "onclic" );
                   console.log("remove onclic")
-                  $( "#submit" ).addClass( "validate", 450, callback );
+                  $( "#submit" ).addClass( "validate");
                 }, 2250 );
-              }
-                function callback() {
+              
+             
                   setTimeout(function() {
                     $( "#submit" ).removeClass( "validate" );
                       console.log("add class")
                      $( "#submit" ).addClass("btn submit-contact");
                   }, 1250 );
-                }
+                
               });
              console.log("done succes")
 
