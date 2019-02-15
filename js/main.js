@@ -93,10 +93,10 @@ $('#message_form').submit(function() {
                 console.log("in function")
                 $( "#submit" ).removeClass("btn submit-contact");
            
-                $( "#submit" ).addClass( "onclic");
+                $( "#submit" ).addClass( "onclic submit-button");
             
                 setTimeout(function() {
-                  $( "#submit" ).removeClass( "onclic" );
+                  $( "#submit" ).removeClass( "onclic submit-button" );
                   console.log("remove onclic")
                   $( "#submit" ).addClass( "validate");
                 }, 2250 );
