@@ -88,7 +88,6 @@ $('#message_form').submit(function() {
             status('Error: ' + xhr.status)
           },
            success: function(response) {
-            alert("Message Sent!");
             setTimeout(function() {
               $(".link1").click()
             }, 1000);
